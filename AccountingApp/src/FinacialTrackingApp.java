@@ -16,7 +16,7 @@ public class FinacialTrackingApp {
     ledgerChoice(pickone);
     }
 
-
+//homescreen allows user to input a choice
     public static String showHomescreen() {
         System.out.println("Welcome to Finacial Tracker");
         System.out.println("What would you like to do?: ");
@@ -26,7 +26,7 @@ public class FinacialTrackingApp {
         String choice = scanner.nextLine().toUpperCase();
         return choice;
     }
-
+//takes input and chooses method depending on their option
     public static void handleChoiceHomescreen(String choice) {
         switch (choice) {
             case "D":
