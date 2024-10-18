@@ -12,8 +12,8 @@ public class FinacialTrackingApp {
     public static void main(String[] args) {
        String choice = showHomescreen();
     handleChoiceHomescreen(choice);
-        String pickone = showLedger();
-        ledgerChoice(pickone);
+    String pickone = showLedger();
+    ledgerChoice(pickone);
     }
 
 
@@ -75,11 +75,12 @@ public class FinacialTrackingApp {
             // call the method to add the transaction
             addTransaction(transaction);
         }
-        public static void showLedger () {
+        public static String showLedger () {
             System.out.println("Welcome to ledger screen!");
             System.out.println("here are some options:");
             System.out.println("Display All (A), Display Deposits(B), Display Payments(C), Home(H) ");
             String pickone = sc.nextLine().toUpperCase();
+            return pickone;
         }
         public static void ledgerChoice(String pickone){
         switch (pickone){
@@ -93,7 +94,7 @@ public class FinacialTrackingApp {
                 displayPayments();
                 break;
             case "H":
-                showHomescreen();
+                goHome();
                 break;
         }
         }
@@ -101,7 +102,13 @@ public class FinacialTrackingApp {
                System.out.println("closing application...");
         }
         public static void displayPayments(){
+        try{
+            FileReader freader = new FileReader("src\\transactions.csv");
+            BufferedReader reader = new BufferedReader(freader);
 
+        } catch(IOException e) {
+            System.out.println(e.getMessage());
+}
         }
         public static void displayDesposits(){
 
@@ -113,13 +120,14 @@ public class FinacialTrackingApp {
             String file1;
             while ((file1 = br.readLine()) != null) {
                 String[] fileInfo = file1.split(Pattern.quote("|"));
-                System.out.println(Arrays.toString(fileInfo));
-                fr.close();
-                br.close();
+                System.out.println(file1);
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+    }
+    public static void goHome(){
+        showHomescreen();
     }
         //helper method by maaike
     public static List<String[]> getTransactionsFromFile() {
