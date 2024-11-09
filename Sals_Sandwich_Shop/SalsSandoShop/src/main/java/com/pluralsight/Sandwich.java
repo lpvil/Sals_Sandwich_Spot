@@ -5,8 +5,13 @@ import java.util.List;
 
 public class Sandwich {
     private ArrayList<String> breadType;
-    private int sandwichSize;
+    protected int sandwichSize;
     private boolean isToasted;
+    private double baseSandwichPrice;
+
+    public Sandwich() {
+
+    }
 
     public ArrayList<String> getBreadType(){
         breadType = new ArrayList<String>();
@@ -17,10 +22,24 @@ public class Sandwich {
         return breadType;
     }
 
-    public Sandwich(ArrayList<String> breadType, int sandwichSize, boolean isToasted) {
+    public Sandwich(double baseSandwichPrice,ArrayList<String> breadType, int sandwichSize, boolean isToasted) {
         this.breadType = breadType;
         this.sandwichSize = sandwichSize;
         this.isToasted = isToasted;
+        this.baseSandwichPrice = baseSandwichPrice;
+    }
+    public double getBaseSandwichPrice() {
+        switch (sandwichSize) {
+            case 4:
+                baseSandwichPrice = 5.50;
+            case 8:
+                baseSandwichPrice = 7.00;
+            case 12:
+                baseSandwichPrice = 8.50;
+            default:
+                System.out.println("please choose a sandwich size");
+        }
+        return baseSandwichPrice;
     }
 
     public int getSandwichSize() {

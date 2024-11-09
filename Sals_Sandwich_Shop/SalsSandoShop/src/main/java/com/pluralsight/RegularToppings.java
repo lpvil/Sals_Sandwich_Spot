@@ -2,9 +2,14 @@ package com.pluralsight;
 
 import java.util.ArrayList;
 
-public class RegularToppings {
+public class RegularToppings extends Sandwich {
     private ArrayList<String> veggies;
     private ArrayList<String> condiments;
+
+
+    public RegularToppings() {
+        super();
+    }
 
     public ArrayList<String> getVeggies() {
         veggies = new ArrayList<>();
