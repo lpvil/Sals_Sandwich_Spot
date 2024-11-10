@@ -32,12 +32,16 @@ public class Sandwich {
         switch (sandwichSize) {
             case 4:
                 baseSandwichPrice = 5.50;
+                break;
             case 8:
                 baseSandwichPrice = 7.00;
+                break;
             case 12:
                 baseSandwichPrice = 8.50;
+                break;
             default:
                 System.out.println("please choose a sandwich size");
+                break;
         }
         return baseSandwichPrice;
     }
