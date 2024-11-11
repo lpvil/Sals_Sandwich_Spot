@@ -12,6 +12,10 @@ public class ExtraToppings extends RegularToppings {
     private double extraCheesePrice;
     private double meatsPrice;
 
+    public ExtraToppings() {
+
+    }
+
     public void sandoMeats(){
         meats = new ArrayList<>();
         meats.add("Steak");

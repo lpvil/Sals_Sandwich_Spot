@@ -1,17 +1,23 @@
 package com.pluralsight;
 
-public class BevAndChips {
+public class ExtraOptions {
     private String drinkSize;
     private double drinkPrice;
     private String chips;
     private double chipsPrice;
 
-    public BevAndChips(String drinkSize, double drinkPrice,String chips, double chipsPrice){
+    public ExtraOptions(String drinkSize, double drinkPrice,String chips, double chipsPrice){
         this.drinkSize = drinkSize;
         this.drinkPrice = drinkPrice;
         this.chips = chips;
         this.chipsPrice = chipsPrice;
     }
+
+    public ExtraOptions() {
+
+    }
+
+
     public double getDrinkPrice(){
         switch (drinkSize){
             case "small":
