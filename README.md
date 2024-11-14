@@ -12,4 +12,9 @@ This application is meant to be a sandwich shops order screen. You are able to c
 * Checkout
 
 -----------------------------------------------------------------------------
-
+>Home Screen
+<img src="https://ibb.co/fq7MjjH" alt="home_screen">
+>
+<img src="https://ibb.co/Cw3yCDN" alt="image_description">
+<img src="https://ibb.co/wsj0Prv" alt="image_description">
+<img src="https://ibb.co/VNNkDXC" alt="image_description">
