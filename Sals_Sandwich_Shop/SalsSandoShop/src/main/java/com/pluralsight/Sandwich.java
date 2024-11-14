@@ -3,9 +3,9 @@ package com.pluralsight;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sandwich {
+public class Sandwich implements Orderable {
     private String bread;
-    private ArrayList<Topping> toppings;
+    private ArrayList<Topping> toppings = new ArrayList<>();
     private boolean isToasted;
     private int sandwichSize;
 
@@ -35,7 +35,6 @@ public class Sandwich {
     }
 
     public ArrayList<Topping> getToppings() {
-        List<Topping> t = new ArrayList<>();
         return toppings;
     }
 
@@ -49,6 +48,16 @@ public class Sandwich {
 
     public void setToasted(boolean toasted) {
         isToasted = toasted;
+    }
+
+    @Override
+    public double getPrice() {
+        return 0;
+    }
+
+    @Override
+    public String writeToFile() {
+        return "";
     }
 }
 

@@ -85,7 +85,7 @@ public class CreateASandwich {
         }
         return baseSandwichPrice;
     }
-    public static void makingSandwich() {
+    public static Sandwich makingSandwich() {
         Sandwich sandwich = new Sandwich();
         System.out.println("What kind of bread would you like?: ");
         System.out.println("(0)White, (1)Wheat, (2)Rye, (3)Wrap");
@@ -183,6 +183,6 @@ public class CreateASandwich {
             }else {
                 addSide = false;
             }
-        }
+        }return sandwich;
     }
 }

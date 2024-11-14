@@ -8,6 +8,7 @@ import static com.pluralsight.HomeScreen.mainHomeScreen;
 
 public class OrderScreen implements Actions {
     static Scanner scanner = new Scanner(System.in);
+    private Receipt receipt = new Receipt();
     private int actions;
 
     private double orderTotal;
@@ -49,7 +50,7 @@ public class OrderScreen implements Actions {
         Chip chips = new Chip();
         System.out.println("chips added to order");
         chips.getChipsPrice();
-        newOrderScreen();
+        receipt.getOrders().add(chips);
     }
 
     @Override

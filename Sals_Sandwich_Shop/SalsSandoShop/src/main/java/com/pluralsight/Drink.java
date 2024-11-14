@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public class Drink {
+public class Drink implements Orderable {
     private int drinkSize;
     private double drinkPrice;
 
@@ -26,5 +26,15 @@ public class Drink {
 
     public void setDrinkPrice(double drinkPrice) {
         this.drinkPrice = drinkPrice;
+    }
+
+    @Override
+    public double getPrice() {
+        return drinkPrice;
+    }
+
+    @Override
+    public String writeToFile() {
+        return "";
     }
 }

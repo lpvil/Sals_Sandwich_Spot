@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public class Chip {
+public class Chip implements Orderable {
     private double chipsPrice;
 
     public Chip(double chipsPrice) {
@@ -16,5 +16,15 @@ public class Chip {
 
     public void setChipsPrice(double chipsPrice) {
         this.chipsPrice = chipsPrice;
+    }
+
+    @Override
+    public double getPrice() {
+        return chipsPrice;
+    }
+
+    @Override
+    public String writeToFile() {
+        return "";
     }
 }

@@ -6,13 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f0b5e4cb-7d32-4616-ba86-e63c10cc1c0f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Chip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Chip.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/CreateASandwich.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/CreateASandwich.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/HomeScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Drink.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/OrderScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/OrderScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Receipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Receipt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/RegularToppings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/RegularToppings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Sandwich.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Sandwich.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Topping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Topping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pluralsight/Sandwich.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pluralsight/Sandwich.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
