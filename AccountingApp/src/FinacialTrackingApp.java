@@ -43,6 +43,7 @@ public class FinacialTrackingApp {
                 break;
         }
     }
+    //method to take in deposit input
         public static void makeDeposit () {
             // get input using scanner
             System.out.println("how much would you like to deposit?: ");
@@ -59,6 +60,7 @@ public class FinacialTrackingApp {
             // call the method to add the transaction
             addTransaction(transaction);
         }
+        //method to take in payment
         public static void makePayment () {
             // same as make deposti, but preceed amount by a -
             System.out.println("how much of a payment would you like to make?: ");
@@ -75,6 +77,7 @@ public class FinacialTrackingApp {
             // call the method to add the transaction
             addTransaction(transaction);
         }
+        //method to show ledger when chosen off the home screen
         public static String showLedger () {
             System.out.println("Welcome to ledger screen!");
             System.out.println("here are some options:");
@@ -82,6 +85,7 @@ public class FinacialTrackingApp {
             String pickone = sc.nextLine().toUpperCase();
             return pickone;
         }
+        //choosing ledger options
         public static void ledgerChoice(String pickone){
         switch (pickone){
             case "A":
@@ -113,6 +117,7 @@ public class FinacialTrackingApp {
         public static void displayDesposits(){
 
         }
+        //method to display all transactions
         public static void displayAllTransactions(){
         try {
             FileReader fr = new FileReader("src\\transactions.csv");
@@ -126,6 +131,7 @@ public class FinacialTrackingApp {
             System.out.println(e.getMessage());
         }
     }
+    //takes you back home
     public static void goHome(){
         showHomescreen();
     }
