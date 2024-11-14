@@ -16,7 +16,6 @@ public class Sandwich {
         this.sandwichSize = sandwichSize;
     }
   public Sandwich(){
-
   }
 
     public int getSandwichSize() {
@@ -36,6 +35,7 @@ public class Sandwich {
     }
 
     public ArrayList<Topping> getToppings() {
+        List<Topping> t = new ArrayList<>();
         return toppings;
     }
 

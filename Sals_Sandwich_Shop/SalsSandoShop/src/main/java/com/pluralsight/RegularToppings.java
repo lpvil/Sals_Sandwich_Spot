@@ -7,4 +7,5 @@ public class RegularToppings extends Topping {
     public RegularToppings(String toppingName) {
         super(toppingName);
     }
+
 }

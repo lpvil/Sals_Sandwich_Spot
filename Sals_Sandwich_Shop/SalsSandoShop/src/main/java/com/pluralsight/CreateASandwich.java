@@ -15,6 +15,7 @@ public class CreateASandwich {
     private ArrayList<String> regularToppings;
     private static ArrayList<String> veggies;
     private static ArrayList<String> condiments;
+    private static ArrayList<String> sides;
 
     static {
         breadType = new ArrayList<String>();
@@ -62,6 +63,11 @@ public class CreateASandwich {
         condiments.add("ThousandIsland");
         condiments.add("Vinagrette");
     }
+    static {
+        sides = new ArrayList<>();
+        sides.add("au jus");
+        sides.add("sauce");
+    }
     public double getBaseSandwichPrice() {
         switch (sandwichSize) {
             case 4:
@@ -104,12 +110,18 @@ public class CreateASandwich {
             System.out.println("would you like to add toppings? (y) or (n)");
             String answer = scanner.nextLine();
             if (answer.equalsIgnoreCase("y")) {
-                System.out.println("\nWhat Kind of toppings would you like?: ");
+                System.out.println("\nWhat 3 toppings would you like?: ");
                 System.out.println("(0)lettuce,(1)peppers,(2)onions,(3)tomatoes\n" +
                         "(4)jalapenos,(5)cucumbers,(6)pickles,(7)guacamole,(8)mushrooms,(9)All Toppings");
-                int toppingChoice = scanner.nextInt();
+                int toppingChoice1 = scanner.nextInt();
                 scanner.nextLine();
-                sandwich.getToppings().add(new RegularToppings(veggies.get(toppingChoice)));
+                int toppingChoice2 = scanner.nextInt();
+                scanner.nextLine();
+                int toppingChoice3 = scanner.nextInt();
+                scanner.nextLine();
+                sandwich.getToppings().add(new RegularToppings(veggies.get(toppingChoice1)));
+                sandwich.getToppings().add(new RegularToppings(veggies.get(toppingChoice2)));
+                sandwich.getToppings().add(new RegularToppings(veggies.get(toppingChoice3)));
             }else {
                 addingToppings = false;
             }
@@ -164,11 +176,10 @@ public class CreateASandwich {
             String answer = scanner.nextLine();
             scanner.nextLine();
             if(answer.equalsIgnoreCase("y")){
-                System.out.println("(0)au jus, (1)sauce");
+                System.out.println("(0)au jus, or (1)sauce");
                 int sideChoice = scanner.nextInt();
-                if(sideChoice == 1){
-                    sandwich.getToppings();
-                }
+                scanner.nextLine();
+                sandwich.getToppings().add(new ExtraToppings(sides.get(sideChoice)));
             }else {
                 addSide = false;
             }

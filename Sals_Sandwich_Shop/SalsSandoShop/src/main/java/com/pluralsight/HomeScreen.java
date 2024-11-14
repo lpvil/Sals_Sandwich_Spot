@@ -6,7 +6,8 @@ public class HomeScreen {
     public static void main(String[] args) {
         mainHomeScreen();
     }
-    public static void mainHomeScreen(){
+
+    public static void mainHomeScreen() {
         Scanner scanner = new Scanner(System.in);
         int choice;
         System.out.println("------Welcome-To-Sal's-Sandwich-Shop-------");
@@ -15,7 +16,7 @@ public class HomeScreen {
         choice = scanner.nextInt();
         scanner.nextLine();
 
-        switch (choice){
+        switch (choice) {
             case 1:
                 newOrderScreen();
                 break;
@@ -24,12 +25,14 @@ public class HomeScreen {
                 break;
         }
     }
-    public static void newOrderScreen(){
+
+    public static void newOrderScreen() {
         OrderScreen screen = new OrderScreen();
         screen.newOrderScreen();
         screen.actionsTaken();
     }
-    public static void checkoutScreen(){
+
+    public static void checkoutScreen() {
         System.out.println("checkout");
 
     }

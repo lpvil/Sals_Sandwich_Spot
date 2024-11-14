@@ -9,12 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Receipt {
-
-    List<Sandwich> customSandwich = new ArrayList<>();
+    List<Sandwich> order = new ArrayList<>();
 
     public void addToReceipt(){
         try {
             FileWriter fileWriter = new FileWriter(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME) + "recipts.txt");
+            for(){
+                fileWriter.write();
+
+            }
         }catch (IOException e){
             System.out.println("cannot save receipt");
         }

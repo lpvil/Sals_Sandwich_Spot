@@ -1,14 +1,18 @@
 package com.pluralsight;
 
+import java.util.ArrayList;
+
 public class Topping {
-private String toppingName;
+    private String toppingName;
 
     public Topping(String toppingName) {
         this.toppingName = toppingName;
     }
-public Topping(){
 
-}
+    public Topping() {
+
+    }
+
     public String getToppingName() {
         return toppingName;
     }

@@ -46,7 +46,10 @@ public class OrderScreen implements Actions {
 
     @Override
     public void addChipsToOrder() {
-
+        Chip chips = new Chip();
+        System.out.println("chips added to order");
+        chips.getChipsPrice();
+        newOrderScreen();
     }
 
     @Override
@@ -56,6 +59,12 @@ public class OrderScreen implements Actions {
 
     @Override
     public void addDrinkToOrder() {
+        Drink drink = new Drink();
+            System.out.println("what size drink would you like?: ");
+            System.out.println("(0)small, (1)medium, (2)large");
+            int sizeChoice = scanner.nextInt();
+            drink.setDrinkSize(sizeChoice);
+            newOrderScreen();
     }
 
     @Override
