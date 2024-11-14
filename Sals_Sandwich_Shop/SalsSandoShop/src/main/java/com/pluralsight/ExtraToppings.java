@@ -2,47 +2,50 @@ package com.pluralsight;
 
 import java.util.ArrayList;
 
-public class ExtraToppings extends RegularToppings {
-    private ArrayList<String> meats;
-    private ArrayList<String> cheeses;
-    private ArrayList<String> regularToppings;
-    private String extraMeats;
-    private String extraCheeses;
-    private double extraMeatPrice;
-    private double extraCheesePrice;
-    private double meatsPrice;
+public class ExtraToppings extends Topping {
+    private double extraPrice;
+    private double basePrice;
+    private String toppingName;
 
-    public ExtraToppings() {
-
+    public ExtraToppings(double extraPrice, double basePrice, String toppingName) {
+        this.extraPrice = extraPrice;
+        this.basePrice = basePrice;
+        this.toppingName = toppingName;
     }
 
-    public void sandoMeats(){
-        meats = new ArrayList<>();
-        meats.add("Steak");
-        meats.add("Ham");
-        meats.add("Salami");
-        meats.add("Roast Beef");
-        meats.add("Chicken");
-        meats.add("Bacon");
-    }
-    public void sandoCheeses(){
-        cheeses = new ArrayList<>();
-        cheeses.add("American");
-        cheeses.add("Provalone");
-        cheeses.add("Cheddar");
-        cheeses.add("Swiss");
+    public ExtraToppings(String toppingName) {
+        super(toppingName);
     }
 
-    public ExtraToppings(ArrayList<String> meats, ArrayList<String> cheeses, ArrayList<String> regularToppings, String extraMeats, String extraCheeses, double extraMeatPrice, double extraCheesePrice) {
-        super();
-        this.meats = meats;
-        this.cheeses = cheeses;
-        this.regularToppings = regularToppings;
-        this.extraMeats = extraMeats;
-        this.extraCheeses = extraCheeses;
-        this.extraCheesePrice = extraCheesePrice;
-        this.extraMeatPrice = extraMeatPrice;
+    public double getExtraPrice() {
+        return extraPrice;
     }
+
+    public void setExtraPrice(double extraPrice) {
+        this.extraPrice = extraPrice;
+    }
+
+    public double getBasePrice() {
+        return basePrice;
+    }
+
+    public void setBasePrice(double basePrice) {
+        this.basePrice = basePrice;
+    }
+
+    @Override
+    public String getToppingName() {
+        return toppingName;
+    }
+
+    @Override
+    public void setToppingName(String toppingName) {
+        this.toppingName = toppingName;
+    }
+}
+
+
+    /*
     public double getMeatsPrice(){
         if(getSandwichSize()== 4){
             meatsPrice = 1.00;}
@@ -95,3 +98,4 @@ public class ExtraToppings extends RegularToppings {
         this.extraCheeses = extraCheeses;
     }
 }
+*/

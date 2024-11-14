@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import static com.pluralsight.HomeScreen.checkoutScreen;
+import static com.pluralsight.HomeScreen.mainHomeScreen;
 
 public class OrderScreen implements Actions {
     static Scanner scanner = new Scanner(System.in);
@@ -11,7 +12,6 @@ public class OrderScreen implements Actions {
 
     private double orderTotal;
 //object created in order to access class
-    CreateASandwich sandwich = new CreateASandwich();
 //new order screen takes user input to choose an action
     public void newOrderScreen() {
         System.out.println("----NEW-ORDER----");
@@ -45,18 +45,17 @@ public class OrderScreen implements Actions {
     }
 
     @Override
-    public double addChipsToOrder() {
-        return orderTotal;
+    public void addChipsToOrder() {
+
     }
 
     @Override
     public void addSandwichToOrder() {
-        sandwich.makingSandwich();
+        CreateASandwich.makingSandwich();
     }
 
     @Override
-    public double addDrinkToOrder() {
-        return orderTotal;
+    public void addDrinkToOrder() {
     }
 
     @Override
@@ -66,7 +65,8 @@ public class OrderScreen implements Actions {
 
     @Override
     public void cancelOrder() {
-
+        System.out.println("canceling order...\n");
+        mainHomeScreen();
     }
 
     public double getOrderTotal() {

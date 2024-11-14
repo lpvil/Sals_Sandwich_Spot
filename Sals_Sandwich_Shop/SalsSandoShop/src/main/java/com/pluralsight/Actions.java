@@ -1,9 +1,9 @@
 package com.pluralsight;
 
 public interface Actions {
-   double addChipsToOrder();
+   void addChipsToOrder();
    void addSandwichToOrder();
-   double addDrinkToOrder();
+   void addDrinkToOrder();
    void checkout();
    void cancelOrder();
 }
