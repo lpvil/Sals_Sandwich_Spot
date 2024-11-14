@@ -1,0 +1,1 @@
+Drink{drinkSize=0, drinkPrice=0.0}

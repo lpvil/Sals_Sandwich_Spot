@@ -1,0 +1,1 @@
+Sandwich{bread='null', toppings=[com.pluralsight.RegularToppings@421faab1, com.pluralsight.RegularToppings@2b71fc7e, com.pluralsight.ExtraToppings@5ce65a89], isToasted=false, sandwichSize=4}

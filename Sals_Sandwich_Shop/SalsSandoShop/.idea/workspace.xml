@@ -9,9 +9,14 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Chip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Chip.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/CreateASandwich.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/CreateASandwich.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Drink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/HomeScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/OrderScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/OrderScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Receipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Receipt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Sandwich.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Sandwich.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pluralsight/CreateASandwich.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pluralsight/CreateASandwich.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pluralsight/ExtraOptions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pluralsight/HomeScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pluralsight/HomeScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pluralsight/OrderScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pluralsight/OrderScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pluralsight/Sandwich.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pluralsight/Sandwich.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,14 +43,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HomeScreen.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;staged&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HomeScreen.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

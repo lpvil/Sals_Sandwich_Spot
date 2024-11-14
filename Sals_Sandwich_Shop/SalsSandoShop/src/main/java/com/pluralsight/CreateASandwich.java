@@ -24,6 +24,7 @@ public class CreateASandwich {
         breadType.add("Rye");
         breadType.add("Wrap");
     }
+
     static {
         meats = new ArrayList<>();
         meats.add("Steak");
@@ -63,11 +64,13 @@ public class CreateASandwich {
         condiments.add("ThousandIsland");
         condiments.add("Vinagrette");
     }
+
     static {
         sides = new ArrayList<>();
         sides.add("au jus");
         sides.add("sauce");
     }
+
     public double getBaseSandwichPrice() {
         switch (sandwichSize) {
             case 4:
@@ -85,104 +88,115 @@ public class CreateASandwich {
         }
         return baseSandwichPrice;
     }
+
     public static Sandwich makingSandwich() {
+
         Sandwich sandwich = new Sandwich();
-        System.out.println("What kind of bread would you like?: ");
-        System.out.println("(0)White, (1)Wheat, (2)Rye, (3)Wrap");
-        breadchoice = scanner.nextInt();
-        scanner.nextLine();
-
-        if (breadchoice >= 0 && breadchoice < breadType.size()) {
-            System.out.println("Awesome choice! we'll add " + breadType.get(breadchoice) + " bread to your order.");
-        } else {
-            System.out.println("not valid input");
-        }
-
-        System.out.println("\nsmall- $5.50, medium- $7.00, large- $8.50?");
-        System.out.println("please choose from our three sizes 4 inch, 8 inch, 12 inch");
-        int choice = scanner.nextInt();
-        scanner.nextLine();
-        if (choice == 4 || choice == 8 || choice == 12) {
-           sandwich.getSandwichSize();
-        }
-        boolean addingToppings = true;
-        while (addingToppings) {
-            System.out.println("would you like to add toppings? (y) or (n)");
-            String answer = scanner.nextLine();
-            if (answer.equalsIgnoreCase("y")) {
-                System.out.println("\nWhat 3 toppings would you like?: ");
-                System.out.println("(0)lettuce,(1)peppers,(2)onions,(3)tomatoes\n" +
-                        "(4)jalapenos,(5)cucumbers,(6)pickles,(7)guacamole,(8)mushrooms,(9)All Toppings");
-                int toppingChoice1 = scanner.nextInt();
-                scanner.nextLine();
-                int toppingChoice2 = scanner.nextInt();
-                scanner.nextLine();
-                int toppingChoice3 = scanner.nextInt();
-                scanner.nextLine();
-                sandwich.getToppings().add(new RegularToppings(veggies.get(toppingChoice1)));
-                sandwich.getToppings().add(new RegularToppings(veggies.get(toppingChoice2)));
-                sandwich.getToppings().add(new RegularToppings(veggies.get(toppingChoice3)));
-            }else {
-                addingToppings = false;
-            }
-        }
-        boolean addCondiments = true;
-        while (addCondiments) {
-            System.out.println("would you like to add condiments? (y) or (n)");
-            String answer = scanner.nextLine();
-            if (answer.equalsIgnoreCase("y")) {
-                System.out.println("\nWhat Kind of condiments would you like?: ");
-                System.out.println("(0)mayo,(1)mustard,(2)ketchup,(3)ranch\n" +
-                        "(4)thousand islands,(5)vinaigrette");
-                int condimentsChoice = scanner.nextInt();
-                scanner.nextLine();
-                sandwich.getToppings().add(new RegularToppings(condiments.get(condimentsChoice)));
-            }else {
-                addCondiments = false;
-            }
-        }
-        boolean addMeats = true;
-        while (addMeats){
-            System.out.println("would you like to add meat? (y) or (n)");
-            String answer = scanner.nextLine();
-            if(answer.equalsIgnoreCase("y")){
-                System.out.println("what kind of meat would you like?: ");
-                System.out.println("(0)steak,(1)ham,(2)salami,(3)roast beef\n" +
-                        "(4)chicken,(5)bacon");
-                int meatChoice = scanner.nextInt();
-                scanner.nextLine();
-                sandwich.getToppings().add(new ExtraToppings(meats.get(meatChoice)));
-            }else {
-                addMeats = false;
-            }
-        }
-        boolean addCheese = true;
-        while(addCheese){
-            System.out.println("would you like to add cheese for an additional charge? (y) or (n)");
-            String answer = scanner.nextLine();;
-            if(answer.equalsIgnoreCase("y")){
-                System.out.println("what kind of cheese would you like?: ");
-                System.out.println("(0)american, (1)provalone, (2)cheddar, (3)swiss");
-                int cheeseChoice = scanner.nextInt();
-                scanner.nextLine();
-                sandwich.getToppings().add(new ExtraToppings(cheeses.get(cheeseChoice)));
-            }else {
-                addCheese = false;
-            }
-        }
-        boolean addSide = true;
-        while(addSide){
-            System.out.println("would you like to add a side?: (y) or (n) ");
-            String answer = scanner.nextLine();
+        boolean makingsandwich = true;
+        while (makingsandwich) {
+            System.out.println("What kind of bread would you like?: ");
+            System.out.println("(0)White, (1)Wheat, (2)Rye, (3)Wrap");
+            breadchoice = scanner.nextInt();
             scanner.nextLine();
-            if(answer.equalsIgnoreCase("y")){
-                System.out.println("(0)au jus, or (1)sauce");
-                int sideChoice = scanner.nextInt();
-                scanner.nextLine();
-                sandwich.getToppings().add(new ExtraToppings(sides.get(sideChoice)));
-            }else {
-                addSide = false;
+
+            if (breadchoice >= 0 && breadchoice < breadType.size()) {
+                System.out.println("Awesome choice! we'll add " + breadType.get(breadchoice) + " bread to your order.");
+            } else {
+                System.out.println("not valid input");
             }
-        }return sandwich;
+
+            System.out.println("\nsmall- $5.50, medium- $7.00, large- $8.50?");
+            System.out.println("please choose from our three sizes 4 inch, 8 inch, 12 inch");
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+            if (choice == 4 || choice == 8 || choice == 12) {
+                sandwich.setSandwichSize(choice);
+            }
+            boolean addingToppings = true;
+            while (addingToppings) {
+                System.out.println("would you like to add toppings? (y) or (n)");
+                String answer = scanner.nextLine();
+                if (answer.equalsIgnoreCase("y")) {
+                    System.out.println("\nWhat toppings would you like?: ");
+                    System.out.println("(0)lettuce,(1)peppers,(2)onions,(3)tomatoes\n" +
+                            "(4)jalapenos,(5)cucumbers,(6)pickles,(7)guacamole,(8)mushrooms,(9)All Toppings");
+                    int toppingChoice = scanner.nextInt();
+                    scanner.nextLine();
+                    sandwich.getToppings().add(new RegularToppings(veggies.get(toppingChoice)));
+                } else {
+                    addingToppings = false;
+                }
+            }
+            boolean addCondiments = true;
+            while (addCondiments) {
+                System.out.println("would you like to add condiments? (y) or (n)");
+                String addCondimentsAnswer = scanner.nextLine();
+                if (addCondimentsAnswer.equalsIgnoreCase("y")) {
+                    System.out.println("\nWhat Kind of condiments would you like?: ");
+                    System.out.println("(0)mayo,(1)mustard,(2)ketchup,(3)ranch\n" +
+                            "(4)thousand islands,(5)vinaigrette");
+                    int condimentsChoice = scanner.nextInt();
+                    scanner.nextLine();
+                    sandwich.getToppings().add(new RegularToppings(condiments.get(condimentsChoice)));
+                } else {
+                    addCondiments = false;
+                }
+            }
+            boolean addMeats = true;
+            while (addMeats) {
+                System.out.println("would you like to add meat? (y) or (n)");
+                String addMeatAnswer = scanner.nextLine();
+                if (addMeatAnswer.equalsIgnoreCase("y")) {
+                    System.out.println("what kind of meat would you like?: ");
+                    System.out.println("(0)steak,(1)ham,(2)salami,(3)roast beef\n" +
+                            "(4)chicken,(5)bacon");
+                    int meatChoice = scanner.nextInt();
+                    scanner.nextLine();
+                    sandwich.getToppings().add(new ExtraToppings(meats.get(meatChoice)));
+                } else {
+                    addMeats = false;
+                }
+            }
+            boolean addCheese = true;
+            while (addCheese) {
+                System.out.println("would you like to add cheese for an additional charge? (y) or (n)");
+                String addCheeseAnswer = scanner.nextLine();
+                ;
+                if (addCheeseAnswer.equalsIgnoreCase("y")) {
+                    System.out.println("what kind of cheese would you like?: ");
+                    System.out.println("(0)american, (1)provalone, (2)cheddar, (3)swiss");
+                    int cheeseChoice = scanner.nextInt();
+                    scanner.nextLine();
+                    sandwich.getToppings().add(new ExtraToppings(cheeses.get(cheeseChoice)));
+                } else {
+                    addCheese = false;
+                }
+            }
+            boolean addSide = true;
+            while (addSide) {
+                System.out.println("would you like to add a side?: (y) or (n) ");
+                String addsideanswer = scanner.nextLine();
+                if (addsideanswer.equalsIgnoreCase("y")) {
+                    System.out.println("(0)au jus, or (1)sauce");
+                    int sideChoice = scanner.nextInt();
+                    scanner.nextLine();
+                    sandwich.getToppings().add(new ExtraToppings(sides.get(sideChoice)));
+                } else {
+                    addSide = false;
+                }
+            }
+            System.out.println("would you like it toasted? (y) or (n)");
+            String answer = scanner.nextLine();
+            if (answer.equalsIgnoreCase("y")) {
+                sandwich.isToasted();
+                System.out.println("sandwich is toasting...");
+            }
+            System.out.println("would you like to add another sandwich?: (y) or (n)");
+            String addSandwich = scanner.nextLine();
+            if (addSandwich.equalsIgnoreCase("n")){
+                makingsandwich = false;
+            }
+        }
+        return sandwich;
     }
 }

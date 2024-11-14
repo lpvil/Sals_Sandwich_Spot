@@ -8,12 +8,10 @@ import static com.pluralsight.HomeScreen.mainHomeScreen;
 
 public class OrderScreen implements Actions {
     static Scanner scanner = new Scanner(System.in);
-    private Receipt receipt = new Receipt();
+    public static Receipt receipt = new Receipt();
     private int actions;
 
-    private double orderTotal;
-//object created in order to access class
-//new order screen takes user input to choose an action
+    //new order screen takes user input to choose an action
     public void newOrderScreen() {
         System.out.println("----NEW-ORDER----");
         System.out.println("\n what would you like to order?: ");
@@ -21,7 +19,8 @@ public class OrderScreen implements Actions {
         actions = scanner.nextInt();
         scanner.nextLine();
     }
-//depending on action taken, method is executed.
+
+    //depending on action taken, method is executed.
     public int actionsTaken() {
         switch (actions) {
             case 1:
@@ -48,24 +47,41 @@ public class OrderScreen implements Actions {
     @Override
     public void addChipsToOrder() {
         Chip chips = new Chip();
-        System.out.println("chips added to order");
-        chips.getChipsPrice();
-        receipt.getOrders().add(chips);
+        System.out.println("would you like chips added to order?: (y) or (n) ");
+        String answer = scanner.nextLine();
+        if (answer.equalsIgnoreCase("y")) {
+            receipt.getOrders().add(chips);
+        }
     }
 
     @Override
     public void addSandwichToOrder() {
-        CreateASandwich.makingSandwich();
+
+        Sandwich s = CreateASandwich.makingSandwich();
+        receipt.getOrders().add(s);
+        newOrderScreen();
+        actionsTaken();
     }
 
     @Override
     public void addDrinkToOrder() {
         Drink drink = new Drink();
+        boolean addDrink = true;
+        while (addDrink) {
             System.out.println("what size drink would you like?: ");
             System.out.println("(0)small, (1)medium, (2)large");
             int sizeChoice = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println("would you like to add another drink? (y) or (n)");
+            String answer = scanner.nextLine();
+            if (answer.equalsIgnoreCase("n")) {
+                addDrink = false;
+            }
             drink.setDrinkSize(sizeChoice);
-            newOrderScreen();
+            receipt.getOrders().add(drink);
+        }
+        newOrderScreen();
+        actionsTaken();
     }
 
     @Override
@@ -79,8 +95,4 @@ public class OrderScreen implements Actions {
         mainHomeScreen();
     }
 
-    public double getOrderTotal() {
-
-        return orderTotal;
-    }
 }

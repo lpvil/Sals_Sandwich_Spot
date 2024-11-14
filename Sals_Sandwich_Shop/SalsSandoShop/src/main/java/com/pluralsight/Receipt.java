@@ -1,5 +1,6 @@
 package com.pluralsight;
 
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
@@ -13,14 +14,16 @@ public class Receipt {
 
     public void addToReceipt(){
         try {
-            FileWriter fileWriter = new FileWriter(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME) + "recipts.txt");
-            for(Orderable o :orders){
-                fileWriter.write(o.writeToFile());
+            FileWriter fileWriter = new FileWriter(LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMddyyyy-hhmmss")) + "receipts.txt");
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            for(Orderable o : orders){
+                bufferedWriter.write(o.writeToFile());
 
             }
-            fileWriter.close();
+            bufferedWriter.close();
         }catch (IOException e){
             System.out.println("cannot save receipt");
+            e.printStackTrace();
         }
     }
 

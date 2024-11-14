@@ -30,11 +30,35 @@ public class Drink implements Orderable {
 
     @Override
     public double getPrice() {
+        switch (drinkSize) {
+            case 0:
+                drinkPrice = 2.00;
+                break;
+            case 1:
+                drinkPrice = 2.50;
+                break;
+            case 2:
+                drinkPrice = 3.00;
+                break;
+            default:
+                System.out.println("no drink added");
+                break;
+
+
+        }
         return drinkPrice;
+    }
+//Nima, Cesar, Joezari helped with toString and write and writeToFile
+    @Override
+    public String toString() {
+        return "Drink{" +
+                "drinkSize=" + drinkSize +
+                ", drinkPrice=" + drinkPrice +
+                '}';
     }
 
     @Override
     public String writeToFile() {
-        return "";
+        return toString();
     }
 }

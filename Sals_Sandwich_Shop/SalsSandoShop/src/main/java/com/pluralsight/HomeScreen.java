@@ -33,7 +33,9 @@ public class HomeScreen {
     }
 
     public static void checkoutScreen() {
-        System.out.println("checkout");
-
+    OrderScreen.receipt.addToReceipt();
+    for(Orderable order : OrderScreen.receipt.getOrders()){
+        System.out.println("Here is your receipt for your order:\n " + order);
+    }
     }
 }

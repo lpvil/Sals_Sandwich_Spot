@@ -56,8 +56,18 @@ public class Sandwich implements Orderable {
     }
 
     @Override
+    public String toString() {
+        return "Sandwich{" +
+                "bread='" + bread + '\'' +
+                ", toppings=" + toppings +
+                ", isToasted=" + isToasted +
+                ", sandwichSize=" + sandwichSize +
+                '}';
+    }
+
+    @Override
     public String writeToFile() {
-        return "";
+        return toString();
     }
 }
 
