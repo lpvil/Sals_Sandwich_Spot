@@ -18,25 +18,25 @@ Home Screen is prompted and shows two options. Make a new order or Exit Applicat
 <br>
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/NtzxccK/Screenshot-2024-11-14-151530.png" alt="Screenshot-2024-11-14-151530" border="0"></a>
 
-<br>
+<br><br>
  Order Screen<br>
  <br>
  Order screen gives you the main options for your new order. Here you can add a sandwich, add a drink, add chips, checkout, and cancel order.
 <br>
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/3T9b6QG/Screenshot-2024-11-14-151547.png" alt="Screenshot-2024-11-14-151547" border="0"></a>
-<br>
+<br><br>
  Create A Sandwich<br>
  <br>
  Here you can create your sandwich. Add toppings and condiments. You can choose the size you want and gives you the option of it being toasted.
 <br>
 <a href="https://ibb.co/wsj0Prv"><img src="https://i.ibb.co/dgxWVJh/Screenshot-2024-11-14-151653.png" alt="Screenshot-2024-11-14-151653" border="0"></a>
-<br>
+<br><br>
  Add a Drink<br>
  <br>
  This adds a drink to your order and have the option of choosing your size.
 <br>
 <a href="https://ibb.co/VNNkDXC"><img src="https://i.ibb.co/dccH6np/Screenshot-2024-11-14-151813.png" alt="Screenshot-2024-11-14-151813" border="0"></a>
-<br>
+<br><br>
 Diagram<br>
 <br>
 <br>
