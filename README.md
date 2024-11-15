@@ -35,10 +35,10 @@ Home Screen is prompted and shows two options. Make a new order or Exit Applicat
 <br>
 Diagram<br>
 <br>
-<a href="https://ibb.co/Yyd0N1s"><img src="https://i.ibb.co/F0YHhyT/Screenshot-2024-11-14-212034.png" alt="Screenshot-2024-11-14-212034" border="0"></a><br /><a target='_blank' href='https://nonprofitlight.com/fl/new-smyrna-beach/marine-discovery-center'>marine discovery center</a><br />
+<a href="https://ibb.co/Yyd0N1s"><img src="https://i.ibb.co/F0YHhyT/Screenshot-2024-11-14-212034.png" alt="Screenshot-2024-11-14-212034" border="0"></a><br />
 <br>
 Favorite piece of code<br>
-<a href="https://ibb.co/Fwn4XCZ"><img src="https://i.ibb.co/9TGHhSK/Screenshot-2024-11-15-090347.png" alt="Screenshot-2024-11-15-090347" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>angry picture download</a><br />
+<a href="https://ibb.co/Fwn4XCZ"><img src="https://i.ibb.co/9TGHhSK/Screenshot-2024-11-15-090347.png" alt="Screenshot-2024-11-15-090347" border="0"></a><br />
 
 
 
